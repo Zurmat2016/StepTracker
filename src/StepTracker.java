@@ -30,16 +30,19 @@ public class StepTracker {
         int monthNumber = scanner.nextInt();
         if (monthNumber > 12 || monthNumber < 1) {
             System.out.println("Неверный номер месяца.");
+            return;
         }
-        System.out.println("Введите номер дня (1-30");
+        System.out.println("Введите номер дня (1-30)");
         int dayNumber = scanner.nextInt();
         if (dayNumber > 30 || dayNumber < 1) {
             System.out.println("Указан неверный день.");
+            return;
         }
         System.out.println("Введите количество пройденных шагов:");
         int numSteps = scanner.nextInt();
         if (numSteps < 0) {
             System.out.println("Указано отрицательное значение.");
+            return;
         }
         monthToData[monthNumber].inputDayData(dayNumber, numSteps);
         System.out.println("Данные успешно сохранены.");

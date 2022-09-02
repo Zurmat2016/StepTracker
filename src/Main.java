@@ -27,10 +27,13 @@ public class Main {
                 int command = scanner.nextInt();
                 if (command == 1) { // Вызываем метод для внесения количества пройденных шагов
                     ST.quantitySteps();
+                    printMenu();
                 } else if (command == 2) { // Вызываем метод для вывода статистики пройденных шагов
                     ST.statPrint();
+                    printMenu();
                 } else if (command == 3) { // Вызываем метод для ввода новой цели количества шагов
                     ST.newTarget();
+                    printMenu();
                 } else if (command == 4) {
                     System.out.println("Работа приложения завершена!");
                     return;
